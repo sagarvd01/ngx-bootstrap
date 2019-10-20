@@ -22,8 +22,9 @@ export class AddNavComponent {
 
       if (target && header) {
         const targetPosY: number = target.offsetTop - header.offsetHeight - 6;
-
-        window.scrollTo(0, targetPosY);
+        if(typeof window != "undefined"){
+          window.scrollTo(0, targetPosY);
+        }
       }
     }
   }
